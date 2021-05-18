@@ -1,0 +1,4 @@
+<div class="iTask">
+  <input [value]="task.text" disabled>
+  <ion-icon class="pointer" name="close-circle-outline" (click)="deleteTask()"></ion-icon>
+<small>{{task.date | hour}}</small>

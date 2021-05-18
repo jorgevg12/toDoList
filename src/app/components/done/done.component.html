@@ -1,0 +1,8 @@
+<h4>Done tasks</h4>
+<div class="box">
+  <div class="doneTasks">
+    <ng-container *ngFor="let task of tasks; let i = index;">
+      <app-done-task *ngIf="task.done" (deleteTaskEmit)="deleteTask(i)" [task]="task"></app-done-task>
+    </ng-container>   
+  </div>
+</div>

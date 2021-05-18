@@ -1,0 +1,5 @@
+<div class="iTask">
+  <input [value]="task.text" [(ngModel)]="newText" (keyup.enter)="updateTask()">
+  <ion-icon class="pointer" *ngIf="task.text !== newText" name="save-outline" (click)="updateTask()"></ion-icon>
+  <ion-icon class="pointer" *ngIf="task.text === newText" name="checkmark-circle-outline" (click)="markAsDone()"></ion-icon></div>
+<small>{{task.date | hour}}</small>

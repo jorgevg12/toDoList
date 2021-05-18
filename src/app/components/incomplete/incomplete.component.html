@@ -1,0 +1,12 @@
+<h4>Incomplete tasks</h4>
+<div class="box">
+  <div class="newTask">
+    <input type="text" placeholder="New task" [(ngModel)]="newTaskText" (keyup.enter)="addTask()">
+    <ion-icon class="pointer" name="add-outline" (click)="addTask()"></ion-icon>
+  </div>
+  <div class="incompleteTasks">
+    <ng-container *ngFor="let task of tasks; let i = index;">
+      <app-incomplete-task *ngIf="!task.done" (markAsDoneEmit)="markAsDone(i)" (updateTaskEmit)="updateTask($event, i)" [task]="task"></app-incomplete-task>
+    </ng-container>   
+  </div>
+</div>

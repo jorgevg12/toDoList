@@ -1,0 +1,27 @@
+.box{
+  background-color: white;
+  border-radius: 8px;
+  height: 350px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.newTask{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 16px;
+  align-items: center;
+}
+
+.incompleteTasks{
+  margin-top: 20px;
+  display: grid;
+  row-gap: 12px;
+}
+
+h4{
+  text-align: center;
+}

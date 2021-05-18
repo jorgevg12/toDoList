@@ -1,0 +1,20 @@
+.box{
+  background-color: white;
+  border-radius: 8px;
+  height: 350px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.doneTasks{
+  margin-top: 16px;
+  display: grid;
+  row-gap: 12px;
+}
+
+h4{
+  text-align: center;
+}

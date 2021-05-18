@@ -1,20 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="fullContainer">
+  <img src="assets/cellnexLogo.png" alt="Logo">
+  <h1 class="title">To Do List</h1>
+  <canvas class="chart" id="myChart" width="300" height="250"></canvas>
+  <div class="midContainer">
+    <app-incomplete (updateDataEmit)="loadChart()" [tasks]="tasks"></app-incomplete>
+    <app-done (updateDataEmit)="loadChart()" [tasks]="tasks"></app-done>
   </div>
-</ion-content>
+</div>
